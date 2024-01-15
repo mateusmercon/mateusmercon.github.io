@@ -36,6 +36,16 @@ nav,
 nav {
   justify-content: space-around;
   align-items: center;
+}
+
+#desktop-nav {
+  background-color: #ffffff;
+  width: 100%;
+  z-index: 1000;
+  transition: height 0.5s ease-in-out;
+}
+
+#bottom-nav {
   height: 17vh;
 }
 
@@ -43,6 +53,12 @@ nav {
   gap: 2rem;
   list-style: none;
   font-size: 1.5rem;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
 }
 
 a {
@@ -53,9 +69,6 @@ a {
 
 a:hover {
   color: grey;
-  text-decoration: underline;
-  text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181);
 }
 
 .logo {
@@ -70,6 +83,12 @@ a:hover {
 
 #hamburger-nav {
   display: none;
+  background-color: #ffffff;
+  width: 100%;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  height: 5vh;
 }
 
 .hamburger-menu {
@@ -100,7 +119,7 @@ a:hover {
   width: fit-content;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .menu-links a {
@@ -110,7 +129,7 @@ a:hover {
   font-size: 1.5rem;
   color: black;
   text-decoration: none;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .menu-links li {
@@ -148,7 +167,7 @@ a:hover {
 /* SECTIONS */
 
 section {
-  padding-top: 4vh;
+  padding-top: 15vh;
   height: 96vh;
   margin: 0 10rem;
   box-sizing: border-box;
@@ -362,13 +381,14 @@ article .icon {
 
 .color-container {
   border-color: rgb(163, 163, 163);
-  background: rgb(250, 250, 250);
+  background: rgb(248, 248, 248);
 }
 
 .project-img {
   border-radius: 2rem;
   width: 90%;
   height: 90%;
+  border: 0.1rem solid rgb(233, 233, 233);
 }
 
 .project-title {
@@ -376,9 +396,35 @@ article .icon {
   color: black;
 }
 
+.project-tech {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  transition: transform 0.5s ease;
+}
+
+.project-tech:hover {
+  transform: translateY(
+    -0.3rem
+  ); /* Move o elemento para cima em 5 pixels durante o hover. Você pode ajustar conforme necessário. */
+}
+
 .project-btn {
   color: black;
   border-color: rgb(163, 163, 163);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+}
+
+.project-btn:hover {
+  background: rgb(103, 103, 103);
+}
+
+.project-icon {
+  height: 1.5rem;
+  margin-right: 1rem;
+  margin-top: -0.3rem;
 }
 
 /* CONTACT */
@@ -422,7 +468,7 @@ article .icon {
 }
 
 .whatsapp-icon {
-  height: 2.5rem;
+  height: 2.2rem;
 }
 
 /* FOOTER SECTION */
